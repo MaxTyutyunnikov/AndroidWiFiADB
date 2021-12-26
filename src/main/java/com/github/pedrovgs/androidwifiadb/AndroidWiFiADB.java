@@ -44,10 +44,10 @@ public class AndroidWiFiADB {
     }
     DEVICES.clear();
     DEVICES.addAll(adb.getDevicesConnectedByUSB());
-    if (DEVICES.isEmpty()) {
-      view.showNoConnectedDevicesNotification();
-      return;
-    }
+//    if (DEVICES.isEmpty()) {
+//      view.showNoConnectedDevicesNotification();
+//      return;
+//    }
 
     DEVICES.addAll(adb.connectDevices(DEVICES));
     showConnectionResultNotification(DEVICES);

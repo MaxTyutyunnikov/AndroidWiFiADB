@@ -49,6 +49,12 @@ public class ADB {
     return adbParser.parseGetDevicesOutput(adbDevicesOutput);
   }
 
+  public Collection<Device> getDevicesConnectedByIP() {
+    String getDevicesCommand = getCommand("devices -l");
+    String adbDevicesOutput = commandLine.executeCommand(getDevicesCommand);
+    return adbParser.parseGetDevicesOutput(adbDevicesOutput);
+  }
+
   public Collection<Device> connectDevices(Collection<Device> devices) {
     for (Device device : devices) {
       boolean connected = connectDeviceByIp(device);

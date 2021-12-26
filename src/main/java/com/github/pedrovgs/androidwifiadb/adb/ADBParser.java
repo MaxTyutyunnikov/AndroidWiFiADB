@@ -47,9 +47,9 @@ public class ADBParser {
       String line = splittedOutput[i];
       String[] deviceLine = line.split("\\t");
       String id = deviceLine[0].substring(0, deviceLine[0].indexOf(" "));
-      if (id.contains(IP_SEPARATOR)) {
-        continue;
-      }
+//      if (id.contains(IP_SEPARATOR)) {
+//        continue;
+//      }
       String name = parseDeviceName(line);
       Device device = new Device(name, id);
       devices.add(device);

@@ -51,14 +51,14 @@ public class AndroidWiFiADBTest extends UnitTest {
     verify(view).showADBNotInstalledNotification();
   }
 
-  @Test public void shouldShowNoConnectedDevicesNotificationIfThereAreNotConnectedDevicesByUSB() {
-    AndroidWiFiADB androidWiFiAdb = givenAnAndroidWiFiADB();
-    givenThereAreNoConnectedDevices();
-
-    androidWiFiAdb.connectDevices();
-
-    verify(view).showNoConnectedDevicesNotification();
-  }
+//  @Test public void shouldShowNoConnectedDevicesNotificationIfThereAreNotConnectedDevicesByUSB() {
+//    AndroidWiFiADB androidWiFiAdb = givenAnAndroidWiFiADB();
+//    givenThereAreNoConnectedDevices();
+//
+//    androidWiFiAdb.connectDevices();
+//
+//    verify(view).showNoConnectedDevicesNotification();
+//  }
 
   @Test public void shouldShowDevicesConnectedIfADBWiFiWhenConnectionIsEstablished() {
     AndroidWiFiADB androidWiFiAdb = givenAnAndroidWiFiADB();
@@ -91,16 +91,16 @@ public class AndroidWiFiADBTest extends UnitTest {
     assertFalse(androidWiFiAdb.refreshDevicesList());
   }
 
-  @Test public void shouldRefreshDevicesListAddNewDevice() throws Exception {
-    AndroidWiFiADB androidWiFiAdb = givenAnAndroidWiFiADB();
-    List<Device> devices = givenThereAreSomeDevicesConnectedByUSB();
-    givenDevicesAreConnectedSuccessfully(devices);
-    givenAnyIpToDevices();
-
-    assertEquals(0, androidWiFiAdb.getDevices().size());
-    androidWiFiAdb.refreshDevicesList();
-    assertEquals(devices.size(), androidWiFiAdb.getDevices().size());
-  }
+//  @Test public void shouldRefreshDevicesListAddNewDevice() throws Exception {
+//    AndroidWiFiADB androidWiFiAdb = givenAnAndroidWiFiADB();
+//    List<Device> devices = givenThereAreSomeDevicesConnectedByUSB();
+//    givenDevicesAreConnectedSuccessfully(devices);
+//    givenAnyIpToDevices();
+//
+//    assertEquals(0, androidWiFiAdb.getDevices().size());
+//    androidWiFiAdb.refreshDevicesList();
+//    assertEquals(devices.size(), androidWiFiAdb.getDevices().size());
+//  }
 
   @Test public void shouldRefreshDevicesListUpdateExistingDevices() throws Exception {
     AndroidWiFiADB androidWiFiAdb = givenAnAndroidWiFiADB();
