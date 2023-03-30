@@ -28,7 +28,8 @@
     ]]>
   </change-notes>
 
-  <idea-version since-build="131"/>
+<!--  <idea-version since-build="131"/> -->
+  <idea-version since-build="213"/>
 
   <extensions defaultExtensionNs="com.intellij">
 
@@ -49,6 +50,7 @@
 
   </project-components>
 
+  <depends>com.intellij.modules.androidstudio</depends>
   <depends>org.jetbrains.android</depends>
 
   <actions>
